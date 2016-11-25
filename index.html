@@ -7,93 +7,88 @@
 
   <title>Chirag Chamoli - CTO Sourceeasy</title>
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  <meta name="description" content="I am a software architect and developer. Usually in Python/Django. Sometimes in Javascipt, PHP." />
 
-    <meta name="description" content="I am a software architect and developer. Usually in Python/Django. Sometimes in Javascipt, PHP." />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/css/bootstrap.min.css">
-  <style type="text/css">* { font-family: monospace; font-size: 12px; width: 400px; font-family: 'Source Code Pro', monospace;color: #222;  background-color: #fff;
-}
-a{color: #2196F3}
-
-#editor {
-    /** Setting height is also important, otherwise editor wont showup**/
-    height: 300px;
-}
+  <style type="text/css">
+  * { 
+	  	/*font-family: monospace; */
+  		font-size: 14px; 
+  		/*font-family: 'Source Code Pro', monospace;*/
+  		/*color: #222;  */
+	}
+	body{
+  		margin: 0px;
+  		padding: 0px;`
+  	}
+	a{
+		color: #2196F3
+	}
+    #editor {
+        position: absolute;
+        height: 100%;
+		width: 100%;	
+    }
+    .ace_link_marker {
+      position: absolute;
+      border-bottom: 2px solid green;
+    }
 </style>
  </head>
  <body>
+<div id="editor">
 
-<div class="container">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-             <h3 class="panel-title">Editor</h3>
-        </div>
-        <div class="panel-body">
-<div id="editor">function foo(items) {
-    var x = "All this is syntax highlighted";
-    return x;
-}</div>
-        </div>
-    </div>
-    <div class="text-center">---End of editor---</div>
-</div>
+# Welcome to http://chirax.com, 
+# This is official profile of Chirag Chamoli. 
+# Last Updated: 11/5/2016
 
 
 
-  <div>
+
+def hello_world():
+   name = "Chirag Chamoli"
+   description = "I am a software architect and developer. Usually in Python/Django. Sometimes in Javascipt, PHP."
    
 
-   <h1>NAME</h1>
-   <blockquote>
-   <p>Chirag Chamoli</p>
-   </blockquote>
+def blog():
+	blog_list = [
+		{
+			'description': 'About product development, software architecture and development', 
+			'url': 'http://blog.chirax.com/'
+		},
+		{	
+			'description': 'Zen moments', 
+			'url': 'http://zenmoments.soy/'
+		},
+	]
 
-   
-   <h2>DESCRIPTION</h2>
-   <blockquote>
-   <p>I am a software architect and developer. Usually in Python/Django. Sometimes in Javascipt, PHP.</p>
-   <p>
+def companies():
+	i_have_worked_at = ["Sourceeasy", "Aahho", "Inquy", "NetApp", "Tata Elxsi", "Unisys"]   
+	
 
-   You can find my profile on <a href="https://github.com/chiragchamoli">github.com/chiragchamoli</a> or my <a href="https://angel.co/chirag">angel.co/chirag</a>.</p>
-   </blockquote>
 
-   <h2>BLOG</h2>
-   <blockquote>
-    <p>You can find my blog about product development, software architecture and development at <a href="http://blog.chirax.com/">blog.chirax.com</a> and about zen moments at <a href="http://zenmoments.soy/">zenmoments.soy</a> 
-   </blockquote>
-
-    <h2>COMPANIES</h2>   
-    <blockquote>
-      <p>
-        I have worked for <a href="">Sourceeasy</a>, <a href="https://angel.co/aahho">Aahho</a>,<a href="https://angel.co/inquy">Inquy</a>, <a href="http://www.netapp.com/us/index.aspx">NetApp</a>, <a href="http://www.tataelxsi.com/">Tata Elxsi</a> and <a href="http://www.unisys.com/">Unisys</a>.
-      </p>
-    </blockquote>
+def profiles():
+	 instagram = "https://www.instagram.com/chiragchamoli/"
+	 twitter = "https://twitter.com/chiragchamoli"
+	 instagram - = "https://www.instagram.com/chiragchamoli/"
+	 github = "https://github.com/chiragchamoli"
+     angellist = "https://angel.co/chirag"
 
 
 
-   <h2>CONTACT</h2>
-   <blockquote>
-     <p>You can contact me on twitter with <a href="https://twitter.com/chiragchamoli">@chiragchamoli</a>.
-     or email me <a href="mailto:chirax+chiraxcom@gmail.com">chirax@gmail.com</a>.
-     </p>
-   </blockquote>
+# <p>You can contact me on twitter with <a href="https://twitter.com/chiragchamoli">@chiragchamoli</a> or email me <a href="mailto:chirax+chiraxcom@gmail.com">chirax@gmail.com</a>.</div>   
 
-   <br><br>
-   <h2>SEE ALSO</h2>
-   <blockquote>
-      <p>Photos on <a href="https://www.instagram.com/chiragchamoli/">Instagram</a>.</p>
-      <p>Short posts <a href="https://twitter.com/chiragchamoli">Twitter</a>.</p>
-      <p>Starups and such <a href="https://angel.co/chirag">AngelList</a></p>
-   </blockquote>
-  </div>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/core.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.01/ace.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/mode-python.js"></script>
-   <script type="text/javascript">
-     var editor = ace.edit("editor");
-      editor.setTheme("ace/theme/monokai");
-      editor.getSession().setMode("ace/mode/javascript");
 
-   </script>   
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor")
+            editor.setTheme("ace/theme/tomorrow_night");
+
+        editor.getSession().setMode("ace/mode/python");
+
+    </script>
+
 
       <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -103,6 +98,22 @@ a{color: #2196F3}
 
   ga('create', 'UA-33677745-1', 'auto');
   ga('send', 'pageview');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </script>
 
