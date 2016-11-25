@@ -7,92 +7,62 @@
 
   <title>Chirag Chamoli - CTO Sourceeasy</title>
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-  <meta name="description" content="I am a software architect and developer. Usually in Python/Django. Sometimes in Javascipt, PHP." />
 
-  <style type="text/css">
-  * { 
-	  	/*font-family: monospace; */
-  		font-size: 14px; 
-  		/*font-family: 'Source Code Pro', monospace;*/
-  		/*color: #222;  */
-	}
-	body{
-  		margin: 0px;
-  		padding: 0px;`
-  	}
-	a{
-		color: #2196F3
-	}
-    #editor {
-    	position: absolute; 
-    	top: 0; 
-    	left: 0;
-        height: 100%;
-		width: 100%;	
-    }
-    .ace_link_marker {
-      position: absolute;
-      border-bottom: 2px solid green;
-    }
+    <meta name="description" content="I am a software architect and developer. Usually in Python/Django. Sometimes in Javascipt, PHP." />
+
+  <style type="text/css">* { font-family: monospace; font-size: 12px; width: 400px; font-family: 'Source Code Pro', monospace;color: #222;  background-color: #fff;
+}
+a{color: #2196F3}
 </style>
  </head>
  <body>
-<div id="editor">
-
-# Welcome to http://chirax.com, 
-# This is official profile of Chirag Chamoli. 
-# Last Updated: 11/5/2016
-
-
-
-
-def hello_world():
-   name = "Chirag Chamoli"
-   description = "I am a software architect and developer. Usually in Python/Django. Sometimes in Javascipt, PHP."
+  <div>
    
 
-def blog():
-	blog_list = [
-		{
-			'description': 'About product development, software architecture and development', 
-			'url': 'http://blog.chirax.com/'
-		},
-		{	
-			'description': 'Zen moments', 
-			'url': 'http://zenmoments.soy/'
-		},
-	]
+   <h1>NAME</h1>
+   <blockquote>
+   <p>Chirag Chamoli</p>
+   </blockquote>
 
-def companies():
-	i_have_worked_at = ["Sourceeasy", "Aahho", "Inquy", "NetApp", "Tata Elxsi", "Unisys"]   
-	
+   
+   <h2>DESCRIPTION</h2>
+   <blockquote>
+   <p>I am a software architect and developer. Usually in Python/Django. Sometimes in Javascipt, PHP.</p>
+   <p>
 
+   You can find my profile on <a href="https://github.com/chiragchamoli">github.com/chiragchamoli</a> or my <a href="https://angel.co/chirag">angel.co/chirag</a>.</p>
+   </blockquote>
 
-def profiles():
-	 instagram = "https://www.instagram.com/chiragchamoli/"
-	 twitter = "https://twitter.com/chiragchamoli"
-	 instagram - = "https://www.instagram.com/chiragchamoli/"
-	 github = "https://github.com/chiragchamoli"
-     angellist = "https://angel.co/chirag"
+   <h2>BLOG</h2>
+   <blockquote>
+    <p>You can find my blog about product development, software architecture and development at <a href="http://blog.chirax.com/">blog.chirax.com</a> and about zen moments at <a href="http://zenmoments.soy/">zenmoments.soy</a> 
+   </blockquote>
 
-
-
-# <p>You can contact me on twitter with <a href="https://twitter.com/chiragchamoli">@chiragchamoli</a> or email me <a href="mailto:chirax+chiraxcom@gmail.com">chirax@gmail.com</a>.</div>   
+    <h2>COMPANIES</h2>   
+    <blockquote>
+      <p>
+        I have worked for <a href="">Sourceeasy</a>, <a href="https://angel.co/aahho">Aahho</a>,<a href="https://angel.co/inquy">Inquy</a>, <a href="http://www.netapp.com/us/index.aspx">NetApp</a>, <a href="http://www.tataelxsi.com/">Tata Elxsi</a> and <a href="http://www.unisys.com/">Unisys</a>.
+      </p>
+    </blockquote>
 
 
 
+   <h2>CONTACT</h2>
+   <blockquote>
+     <p>You can contact me on twitter with <a href="https://twitter.com/chiragchamoli">@chiragchamoli</a>.
+     or email me <a href="mailto:chirax+chiraxcom@gmail.com">chirax@gmail.com</a>.
+     </p>
+   </blockquote>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.5/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        var editor = ace.edit("editor")
-            editor.setTheme("ace/theme/github");
-
-        editor.getSession().setMode("ace/mode/python");
-
-    </script>
-
-
-      <script>
+   <br><br>
+   <h2>SEE ALSO</h2>
+   <blockquote>
+      <p>Photos on <a href="https://www.instagram.com/chiragchamoli/">Instagram</a>.</p>
+      <p>Short posts <a href="https://twitter.com/chiragchamoli">Twitter</a>.</p>
+      <p>Starups and such <a href="https://angel.co/chirag">AngelList</a></p>
+   </blockquote>
+  </div>
+   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -101,170 +71,7 @@ def profiles():
   ga('create', 'UA-33677745-1', 'auto');
   ga('send', 'pageview');
 
-
-
-
-
-
-
-
-
-
 </script>
-
-<script type="text/javascript">
-  define("hoverlink", [], function(require, exports, module) {
-"use strict";
-
-var oop = require("ace/lib/oop");
-var event = require("ace/lib/event");
-var Range = require("ace/range").Range;
-var EventEmitter = require("ace/lib/event_emitter").EventEmitter;
-
-var HoverLink = function(editor) {
-    if (editor.hoverLink)
-        return;
-    editor.hoverLink = this;
-    this.editor = editor;
-
-    this.update = this.update.bind(this);
-    this.onMouseMove = this.onMouseMove.bind(this);
-    this.onMouseOut = this.onMouseOut.bind(this);
-    this.onClick = this.onClick.bind(this);
-    event.addListener(editor.renderer.scroller, "mousemove", this.onMouseMove);
-    event.addListener(editor.renderer.content, "mouseout", this.onMouseOut);
-    event.addListener(editor.renderer.content, "click", this.onClick);
-};
-
-(function(){
-    oop.implement(this, EventEmitter);
-    
-    this.token = {};
-    this.range = new Range();
-
-    this.update = function() {
-        this.$timer = null;
-        var editor = this.editor;
-        var renderer = editor.renderer;
-        
-        var canvasPos = renderer.scroller.getBoundingClientRect();
-        var offset = (this.x + renderer.scrollLeft - canvasPos.left - renderer.$padding) / renderer.characterWidth;
-        var row = Math.floor((this.y + renderer.scrollTop - canvasPos.top) / renderer.lineHeight);
-        var col = Math.round(offset);
-
-        var screenPos = {row: row, column: col, side: offset - col > 0 ? 1 : -1};
-        var session = editor.session;
-        var docPos = session.screenToDocumentPosition(screenPos.row, screenPos.column);
-        
-        var selectionRange = editor.selection.getRange();
-        if (!selectionRange.isEmpty()) {
-            if (selectionRange.start.row <= row && selectionRange.end.row >= row)
-                return this.clear();
-        }
-        
-        var line = editor.session.getLine(docPos.row);
-        if (docPos.column == line.length) {
-            var clippedPos = editor.session.documentToScreenPosition(docPos.row, docPos.column);
-            if (clippedPos.column != screenPos.column) {
-                return this.clear();
-            }
-        }
-        
-        var token = this.findLink(docPos.row, docPos.column);
-        this.link = token;
-        if (!token) {
-            return this.clear();
-        }
-        this.isOpen = true
-        editor.renderer.setCursorStyle("pointer");
-        
-        session.removeMarker(this.marker);
-        
-        this.range =  new Range(token.row, token.start, token.row, token.start + token.value.length);
-        this.marker = session.addMarker(this.range, "ace_link_marker", "text", true);
-    };
-    
-    this.clear = function() {
-        if (this.isOpen) {
-            this.editor.session.removeMarker(this.marker);
-            this.editor.renderer.setCursorStyle("");
-            this.isOpen = false;
-        }
-    };
-    
-    this.getMatchAround = function(regExp, string, col) {
-        var match;
-        regExp.lastIndex = 0;
-        string.replace(regExp, function(str) {
-            var offset = arguments[arguments.length-2];
-            var length = str.length;
-            if (offset <= col && offset + length >= col)
-                match = {
-                    start: offset,
-                    value: str
-                };
-        });
-    
-        return match;
-    };
-    
-    this.onClick = function() {
-        if (this.link) {
-            this.link.editor = this.editor;
-            this._signal("open", this.link);
-            this.clear()
-        }
-    };
-    
-    this.findLink = function(row, column) {
-        var editor = this.editor;
-        var session = editor.session;
-        var line = session.getLine(row);
-        
-        var match = this.getMatchAround(/https?:\/\/[^\s"']+/g, line, column);
-        if (!match)
-            return;
-        
-        match.row = row;
-        return match;
-    };
-    
-    this.onMouseMove = function(e) {
-        if (this.editor.$mouseHandler.isMousePressed) {
-            if (!this.editor.selection.isEmpty())
-                this.clear();
-            return;
-        }
-        this.x = e.clientX;
-        this.y = e.clientY;
-        this.update();
-    };
-
-    this.onMouseOut = function(e) {
-        this.clear();
-    };
-
-    this.destroy = function() {
-        this.onMouseOut();
-        event.removeListener(this.editor.renderer.scroller, "mousemove", this.onMouseMove);
-        event.removeListener(this.editor.renderer.content, "mouseout", this.onMouseOut);
-        delete this.editor.hoverLink;
-    };
-
-}).call(HoverLink.prototype);
-
-exports.HoverLink = HoverLink;
-
-});
-
-HoverLink = require("hoverlink").HoverLink
-editor.hoverLink = new HoverLink(editor);
-editor.hoverLink.on("open", function() {
-   //alert("trying to open")
-})
-
-
-</script>
-
+   
  </body>
 </html>
