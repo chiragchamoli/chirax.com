@@ -96,6 +96,12 @@
       
   </div> 
   <div class="col-md-3">
+
+  <div style="background-color: #fed53b;color: #22222;padding: 10px;">
+    <div id="time"></div>
+  </div>
+
+
 <h4>Copy Paste</h4>
     <ul>
       <li>chirax@gmail.com</li>
@@ -338,6 +344,21 @@ angular.module('bookmarkApp', [])
               var newPass = password_generator(32);
               $("#password").html(newPass);
             });
+</script>
+
+
+<script type="text/javascript">
+  document.getElementById("time").innerHTML = formatAMPM();
+
+function formatAMPM() {
+var d = new Date(),
+    minutes = d.getMinutes().toString().length == 1 ? '0'+d.getMinutes() : d.getMinutes(),
+    hours = d.getHours().toString().length == 1 ? '0'+d.getHours() : d.getHours(),
+    ampm = d.getHours() >= 12 ? 'pm' : 'am',
+    months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+    days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+return days[d.getDay()]+' '+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYear()+' | '+hours+':'+minutes+ampm;
+}
 </script>
   </body>
 </html>
