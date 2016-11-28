@@ -79,9 +79,9 @@
     </div>
     </div>
     <br>
-    <div class="container-fluid">
+    <div class="container-fluid" ng-controller="BookmarkListController as bookmarkList">
 
-  <div class="col-md-9" ng-controller="BookmarkListController as bookmarkList">
+  <div class="col-md-9" >
     <div class="tiny-text col-md-12">
       <ul class="list-inline" ng-repeat="bookmark in bookmarkList.bookmarks">
         
@@ -103,8 +103,15 @@
   </div> 
   <div class="col-md-3">
 
-  <div style="background-color: #fed53b;color: #22222;padding: 10px;">
-    <div id="time"></div>
+  <div style="background-color: #eff0f1;color: #222;padding: 10px;">
+
+    <!-- <div id="time"></div> -->
+    <div><strong style="text-decoration: underline;">SFO/LA</strong>: {{ bookmarkList.timeInSF }}</div>
+    <br>
+    <div><strong style="text-decoration: underline;">NYC</strong>: {{ bookmarkList.timeInNYC }}</div>
+<br>
+    <div><strong style="text-decoration: underline;">In</strong>: {{ bookmarkList.timeInIn }}</div>
+    
   </div>
 
 
@@ -140,8 +147,25 @@
 angular.module('bookmarkApp', [])
   .controller('BookmarkListController', function() {
     var bookmarkList = this;
-    bookmarkList.color ="#2196F3";
 
+
+
+
+  var offsetSFO = -8;
+  var offsetNYC = -5;
+  var offsetIn = 5.30;
+
+  var timeInSF = new Date( new Date().getTime() + offsetSFO * 3600 * 1000).toUTCString().replace( / GMT$/, "" )
+  var timeInNYC = new Date( new Date().getTime() + offsetNYC * 3600 * 1000).toUTCString().replace( / GMT$/, "" )
+  var timeInIn = new Date( new Date().getTime() + offsetIn * 3600 * 1000).toUTCString().replace( / GMT$/, "" )
+
+
+  
+    console.log(timeInSF);
+    bookmarkList.color ="#2196F3";
+    bookmarkList.timeInSF = timeInSF;
+    bookmarkList.timeInNYC = timeInNYC;
+    bookmarkList.timeInIn = timeInIn;
     bookmarkList.bookmarks = [
       {
         label: "New",
@@ -245,7 +269,7 @@ angular.module('bookmarkApp', [])
       {
         label: "Others",
         links : [
-            {title: "Citibank", url: "https://www.citibank.co.in/", domain: "citibank.co.in"},
+            {title: "Citibank", url: "https://www.citibank.co.in/", domain: "citibank.com"},
             {title: "Lessons from Failed Startups", url: "http://autopsy.io/", domain: "autopsy.io"},
         ]
       },
@@ -358,7 +382,7 @@ angular.module('bookmarkApp', [])
             });
 </script>
 
-
+<!-- 
 <script type="text/javascript">
   document.getElementById("time").innerHTML = formatAMPM();
 
@@ -371,6 +395,11 @@ var d = new Date(),
     days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 return days[d.getDay()]+' '+months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYear()+' | '+hours+':'+minutes+ampm;
 }
+</script> -->
+
+<script type="text/javascript">
+
+
 </script>
   </body>
 </html>
